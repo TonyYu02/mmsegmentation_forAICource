@@ -5,7 +5,7 @@ This Project is for Principles and Applications of Artificial Intelligence Fall 
 Reproduce stdc and Mask2Former with our own dataset, and compared the results.
 
 stdc: [paper and source code](https://github.com/MichaelFan01/STDC-Seg)  
-Mask2Former: [paper and source code](https://github.com/facebookresearch/Mask2Former)
+Mask2Former: [paper and source code](https://github.com/facebookresearch/Mask2Former)  
 Deepcrack Dataset: [data](https://github.com/yhlleo/DeepCrack/blob/master/dataset/DeepCrack.zip)
 
 ## Usage
