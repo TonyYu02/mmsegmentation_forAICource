@@ -44,6 +44,6 @@ python demo/image_demo.py demo/southeast.jpg configs/mask2former/mask2former_swi
 ```
 ### Result
 #### for stdc
-soon
+![stdc](result/comparison_result1.png)
 #### for Mask2Former
-![msfs](result/comparison_result.png)
+![Mask2Former](result/comparison_result.png)
