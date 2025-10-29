@@ -3,8 +3,8 @@ _base_ = ['../_base_/default_runtime.py', '../_base_/datasets/data.py']
 crop_size = (544, 384)
 data_preprocessor = dict(
     type='SegDataPreProcessor',
-    mean=[123.675, 116.28, 103.53],
-    std=[58.395, 57.12, 57.375],
+    mean=None,
+    std=None,
     bgr_to_rgb=True,
     pad_val=0,
     seg_pad_val=255,
@@ -175,3 +175,4 @@ default_hooks = dict(
         save_best='mIoU'),
     sampler_seed=dict(type='DistSamplerSeedHook'),
     visualization=dict(type='SegVisualizationHook'))
+
