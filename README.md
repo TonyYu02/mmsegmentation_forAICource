@@ -23,6 +23,8 @@ After [CUDA11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) inst
    mim install mmengine
    pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.3/index.html
    pip install "mmdet>=3.0.0"
+   # we suggest installing mmdetection from https://github.com/TonyYu02/mmdetection_forAICource
+   # if you use pip, you should change ~\envs\open118\lib\site-packages\mmdet mmcv_maximum_version = '2.2.1'
 
    git clone -b main https://github.com/TonyYu02/mmsegmentation_forAICource.git mmsegmentation
    cd mmsegmentation
@@ -30,7 +32,7 @@ After [CUDA11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) inst
    pip install -v -e .
    ```
 ### Train
-Each model shall be trained for 8,000 epochs, since we noticed that model overfit after training for 8,000 epochs.
+Each model shall be trained for 8,000 epochs, since we noticed that model overfit after training for 10,000 epochs.
 ```
 python tools/train.py configs/stdc/stdc1_10k_crack-544x384.py
 python tools/train.py configs/mask2former/mask2former_r50_8xb2-crack-544x384.py
