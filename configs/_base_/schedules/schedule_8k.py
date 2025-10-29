@@ -8,11 +8,11 @@ param_scheduler = [
         eta_min=1e-4,
         power=0.9,
         begin=0,
-        end=10000,
+        end=8000,
         by_epoch=False)
 ]
 # training schedule for 10k
-train_cfg = dict(type='IterBasedTrainLoop', max_iters=10000, val_interval=2000)
+train_cfg = dict(type='IterBasedTrainLoop', max_iters=8000, val_interval=500)
 val_cfg = dict(type='ValLoop')
 test_cfg = dict(type='TestLoop')
 default_hooks = dict(
@@ -21,4 +21,5 @@ default_hooks = dict(
     param_scheduler=dict(type='ParamSchedulerHook'),
     checkpoint=dict(type='CheckpointHook', by_epoch=False, interval=2000),
     sampler_seed=dict(type='DistSamplerSeedHook'),
+
     visualization=dict(type='SegVisualizationHook'))
