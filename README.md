@@ -22,7 +22,7 @@ After [CUDA11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) inst
    pip install -U openmim
    mim install mmengine
    pip install mmcv==2.2.0 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.3/index.html
-   pip install mmdet>=3.0.0
+   pip install "mmdet>=3.0.0"
 
    git clone -b main https://github.com/TonyYu02/mmsegmentation_forAICource.git mmsegmentation
    cd mmsegmentation
