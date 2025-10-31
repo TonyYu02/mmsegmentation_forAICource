@@ -41,7 +41,7 @@ tta_pipeline = [
         ])
 ]
 train_dataloader = dict(
-    batch_size=2,
+    batch_size=8,
     num_workers=2,
     persistent_workers=True,
     sampler=dict(type='InfiniteSampler', shuffle=True),
@@ -52,7 +52,7 @@ train_dataloader = dict(
             img_path='img_dir/train', seg_map_path='ann_dir/train'),
         pipeline=train_pipeline))
 val_dataloader = dict(
-    batch_size=1,
+    batch_size=2,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type='DefaultSampler', shuffle=False),
@@ -65,4 +65,5 @@ val_dataloader = dict(
 test_dataloader = val_dataloader
 
 val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU'])
+
 test_evaluator = val_evaluator
