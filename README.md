@@ -36,12 +36,11 @@ After [CUDA11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) inst
 Each model shall be trained for 8,000 epochs, since we noticed that model overfit after training for 10,000 epochs.
 ```
 python tools/train.py configs/stdc/stdc1_10k_crack-544x384.py
-python tools/train.py configs/mask2former/mask2former_r50_8xb2-crack-544x384.py
 python tools/train.py configs/mask2former/mask2former_swin-t_8xb2-90k_-crack-544x384.py
 ```
 ### Demo
 ```
-python demo/image_demo.py demo/southeast.jpg configs/mask2former/mask2former_swin-t_8xb2-90k_-crack-544x384.py work_dirs/mask2former_swin-t_8xb2-90k_-crack-544x384/iter_5000.pth --out-file result/southeast_m2fsf.jpg
+python demo/image_demo.py demo/southeast.jpg configs/mask2former/mask2former_swin-t_8xb2-90k_-crack-544x384.py work_dirs/mask2former_swin-t_8xb2-90k_-crack-544x384/iter_8000.pth --out-file result/southeast_m2fsf.jpg
 ```
 ### Result
 #### for stdc
