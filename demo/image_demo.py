@@ -56,8 +56,9 @@ def main():
         ax.set_title(title)
         ax.axis('off')
     plt.tight_layout()
-    out = 'result/comparison_result.png'
-    plt.savefig(out, dpi=1200)
+    filen = args.out_file.rsplit('/', 1)[-1].rsplit('.', 1)[0]
+    comp='result/'+filen+'_comparison_result.png'
+    plt.savefig(comp, dpi=1200)
     plt.show()
 
 
